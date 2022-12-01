@@ -1,104 +1,146 @@
-body{
-    background-image: url("design/teglafal.jpg");
+body {
+  background-image: url("design/teglafal.jpg");
 }
-main{
-    display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
-        grid-template-areas: 
-                        "h  h"
-                        "n  n"
-                       "a   as"
-                       "f   f";
-    
-    margin: auto;
-    width: 80%;
-    max-width: 1000px;
-    background-color: black;
-}
-header{
-    grid-area: h;
-}
-header p{
-    font-family: Garamond;
-    color: white;
-}
-article{
-    grid-area: a;
-}
-article img{
-    width: 20%;
-    border: 1px solid gray;
-}
-ul{
-    color: white;
-}
-nav{
-    grid-area: n;
-}
-article h3{
-    color: white;
-    font-family: serif;
-}
-a:link{
-    color: white;
-    text-decoration: none;
-    display: grid;
-    padding: 15px;
-}
-header{
-    grid-area: h;
-    width: 100%;
-    height: 300px;
-    position: relative;
-    background-image: url('design/beer-new_401732638.jpg');
-    background-size: cover;
-    margin: 30px 0 0 30px;
-}
-header p{
-    text-transform: uppercases;
-}
-.image{
-    width: 100%;
-    height: 100%;
-    font-size: 32px;
-    color: white;
-    display: grid;
-    justify-content: left;
-    flex-direction: column;
-    align-items: left;
-}
-footer{
-    grid-area: f;
-    font-family:Garamond;
-    background-color: rgb(100, 100, 100);
-    color: white;
-    text-align: center;
-}
-@media screen and (max-width:700px) {
-    main{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
-        grid-template-areas: 
-                        "h  h"
-                        "n  n"
-                       "a   as"
-                       "f   f";
-    }
-}
-@media screen and (max-width:400px) {
-    /*menu keruljon a fejlec ala*/
-    main{
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 10px;
-        grid-template-areas: 
-                    "h"
-                    "n"
-                    "a"
-                    "as"
-                    "f";
-    }
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  grid-template-areas:
+    "h  h"
+    "a   n"
+    "f   f";
 
+  margin: auto;
+  width: 80%;
+  max-width: 1000px;
+  background-color: black;
+}
+header {
+  grid-area: h;
+  width: 100%;
+  height: 300px;
+  background-image: url("design/beer-new_401732638.jpg");
+  background-size: cover;
+  letter-spacing: 4px;
+  font-size: 32px;
+  margin: 30px 0 0 30px;
+  font-weight: bold;
+}
+.image {
+  width: 100%;
+  height: 100%;
+  font-size: 32px;
+  color: white;
+  display: grid;
+  justify-content: left;
+  flex-direction: column;
+  align-items: left;
+}
+
+header p {
+  text-transform: uppercases;
+}
+header p {
+  font-family: Garamond;
+  color: white;
+}
+nav {
+  grid-area: n;
+  background-color: rgb(83, 83, 83);
+}
+
+nav a {
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 5px;
+  margin-left: 30px;
+  margin: 0 0 0 30px;
+}
+
+a:link {
+  color: white;
+  display: grid;
+  text-align: left;
+  font-weight: bold;
+  text-decoration: none;
+}
+a:visited {
+  color: red;
+}
+a:hover {
+  color: white;
+}
+a:active {
+  color: blue;
+}
+article {
+  grid-area: a;
+  border: 1px solid gray;
+}
+ul {
+  color: white;
+  text-align: right;
+}
+li {
+  list-style-type: square;
+}
+.kiskep {
+  width: 55%;
+  border: 1px solid gray;
+  float: left;
+}
+
+article h3 {
+  color: white;
+  font-family: serif;
+}
+
+footer {
+  grid-area: f;
+  font-family: Garamond;
+  background-color: rgb(100, 100, 100);
+  color: white;
+  text-align: center;
+}
+@media screen and (max-width: 900px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    grid-template-areas:
+      "h"
+      "n"
+      "a"
+      "f";
+  }
+  header {
+    max-width: 700px;
+  }
+}
+@media screen and (max-width: 700px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    grid-template-areas:
+      "h  h"
+      "a   n"
+      "f   f";
+  }
+  header {
+    max-width: 700px;
+  }
+}
+@media screen and (max-width: 400px) {
+  /*menu keruljon a fejlec ala*/
+  main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    grid-template-areas:
+      "h"
+      "n"
+      "a"
+      "f";
+  }
 }
